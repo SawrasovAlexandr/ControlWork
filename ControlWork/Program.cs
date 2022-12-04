@@ -7,3 +7,15 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
+Console.WriteLine("Введите массив строк через пробел: ");
+string[] strRandomLength = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+string strTemp = String.Empty;
+for (int i = 0; i < strRandomLength.Length; i++)
+{
+    if (strRandomLength[i].Length <= 3)
+    {
+        strTemp += strRandomLength[i] + " "; 
+    }
+}
+string[] str3Length = strTemp.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+Console.WriteLine($"[{String.Join(", ", str3Length)}] ");
